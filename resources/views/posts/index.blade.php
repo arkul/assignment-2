@@ -1,31 +1,57 @@
 @extends('layouts.master')
 
-@section('blog-title')
-The Bootstrap Blog
+@section('page-title')
+::Index::
 @endsection
 
-@section('blog-description')
-The official example template of creating a blog with Bootstrap.
-<form method="POST" action="/logout">
-{{ csrf_field() }}
-<button type="submit">Logout</button>
-</form>
+@section('nav-items')
+
+<!--
+**************************************
+NAV ITEMS
+**************************************
+-->
+<ul class="nav navbar-nav">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+<!--
+**************************************
+END NAV ITEMS
+**************************************
+-->
+
 @endsection
 
-@section('blog-post-title')
-Sample blog post
-@endsection
+@section('page-body')
 
-@section('blog-post-date')
-January 1, 2014
-@endsection
+<div class="container">
+<div class="blog-header">
+<h1 class="blog-title">title goes here</h1>
+<p class="lead blog-description">description goes here</p>
+</div>
+<div class="row">
+<div class="col-sm-8 blog-main">
+<!-- blog posts go here -->
+@foreach ($posts as $post)
+<div class="blog-post">
+<h2 class="blog-post-title">
+<a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+</h2>
+<p class="blog-post-meta">{{ $post->created_at->toFormattedDateString() }} by <a href="#">{{-- $post->user->name --}}</a></p>
+{{ $post->description }}
+</div>
+@endforeach
+<!--<nav>
+<ul class="pager">
+<li><a href="#">Previous</a></li>
+<li><a href="#">Next</a></li>
+</ul>
+</nav>-->
+</div> <!-- /.blog-main -->
+@include('layouts.sidebar')
+</div><!-- /.row -->
+</div><!-- /.container -->
 
-@section('blog-post-author')
-Mark
-@endsection
-
-@section('blog-posts')
-  @foreach ($posts as $post)
-    @include('posts.post')
-  @endforeach
 @endsection
