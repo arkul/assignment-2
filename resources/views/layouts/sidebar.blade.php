@@ -5,6 +5,7 @@
 </div>-->
 <div class="sidebar-module">
   <h4>Archives</h4>
+<<<<<<< HEAD
   @if(count($archives) > 0)
     <ol class="list-unstyled">
     @foreach ($archives as $month)
@@ -15,6 +16,15 @@
   @else
     <i>Nothing here but us chickens!</i>
   @endif
+=======
+  <ol class="list-unstyled">
+  {{-- @foreach ($archives as $month)--}}
+  {{--remember: $archives is an array, not a single object--}}
+    {{-- <li><a href="/?month={{ $month['month'] }}&year={{ $month['year'] }}">{{ $month['month'].' '.$month['year'] }}</a></li>--}}
+  {{-- @endforeach--}}
+  <li><a href="#">Testuary 2014</a></li>
+  </ol>
+>>>>>>> 91ff01ad94fa62bc2e8e529f7bf85fe559e8d33f
 </div>
 <div class="sidebar-module">
   <h4>Elsewhere</h4>

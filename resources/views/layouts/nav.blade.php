@@ -12,6 +12,7 @@ NAV BAR
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       </button>
+<<<<<<< HEAD
     </div>
     <div id="navbar" class="collapse navbar-collapse">
     <a class="navbar-brand" href="{{ url('/') }}">
@@ -43,6 +44,12 @@ NAV BAR
 	  </li>
       @endif
       </ul>
+=======
+<!--       <a class="navbar-brand" href="#">Project name</a> -->
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+@yield('nav-items')
+>>>>>>> 91ff01ad94fa62bc2e8e529f7bf85fe559e8d33f
     </div>
   </div>
 </nav>

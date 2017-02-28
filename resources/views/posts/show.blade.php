@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+<<<<<<< HEAD
 @section('page-title')
 ::Blog Post::
 @endsection
@@ -44,6 +45,18 @@ END NAV ITEMS
 <div class="container">
 
 {{-- List comments --}}
+=======
+@section('blog-title')
+The Bootstrap Blog
+@endsection
+
+@section('blog-description')
+The official example template of creating a blog with Bootstrap.
+@endsection
+
+@section('blog-posts')
+@include('posts.post')
+>>>>>>> 91ff01ad94fa62bc2e8e529f7bf85fe559e8d33f
 <hr />
 <div class="comments">
   <ul class="list-group">
@@ -56,7 +69,10 @@ END NAV ITEMS
   </ul>
 </div>
 
+<<<<<<< HEAD
 @if(Auth::user())
+=======
+>>>>>>> 91ff01ad94fa62bc2e8e529f7bf85fe559e8d33f
 {{-- Add a comment --}}
 <hr/>
 @include('layouts.errors')
@@ -73,7 +89,10 @@ END NAV ITEMS
     </form>
   </div>
 </div>
+<<<<<<< HEAD
 @endif
 
 </div>
+=======
+>>>>>>> 91ff01ad94fa62bc2e8e529f7bf85fe559e8d33f
 @endsection

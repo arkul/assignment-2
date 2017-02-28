@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 namespace Assignment2\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -12,6 +13,15 @@ class PostController extends Controller
     $this->middleware('auth')->except(['index','show']);
   }
 
+=======
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Post;
+
+class PostController extends Controller
+{
+>>>>>>> 91ff01ad94fa62bc2e8e529f7bf85fe559e8d33f
   public function index()
   {
     $posts = Post::latest()->filter(request(['month', 'year']))->get();

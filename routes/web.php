@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+<<<<<<< HEAD
 Route::get('/about', function () {
   return view('about');
 });
@@ -30,3 +31,6 @@ Route::post('/posts/{post}/comments', 'CommentController@store');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index');
+=======
+Route::get('/', 'PostController@index')->name('home'); //->name('home') allows us to use the statement in our controllers: return redirect()->home();
+>>>>>>> 91ff01ad94fa62bc2e8e529f7bf85fe559e8d33f
