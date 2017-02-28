@@ -10,7 +10,4 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PostController@index')->name('home'); //->name('home') allows us to use the statement in our controllers: return redirect()->home();
