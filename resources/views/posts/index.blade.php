@@ -12,14 +12,8 @@ NAV ITEMS
 **************************************
 -->
 <ul class="nav navbar-nav">
-<<<<<<< HEAD
   <li><a href="/about">About</a></li>
   <li><a href="/contact">Contact</a></li>
-=======
-  <li class="active"><a href="#">Home</a></li>
-  <li><a href="#about">About</a></li>
-  <li><a href="#contact">Contact</a></li>
->>>>>>> 91ff01ad94fa62bc2e8e529f7bf85fe559e8d33f
 </ul>
 <!--
 **************************************
@@ -33,13 +27,8 @@ END NAV ITEMS
 
 <div class="container">
 <div class="blog-header">
-<<<<<<< HEAD
 <h1 class="blog-title">Blog list</h1>
 <p class="lead blog-description">Here are the blogs</p>
-=======
-<h1 class="blog-title">title goes here</h1>
-<p class="lead blog-description">description goes here</p>
->>>>>>> 91ff01ad94fa62bc2e8e529f7bf85fe559e8d33f
 </div>
 <div class="row">
 <div class="col-sm-8 blog-main">
