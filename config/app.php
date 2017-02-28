@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'A2 Blog',
 
     /*
     |--------------------------------------------------------------------------
@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Assignment2\Providers\AppServiceProvider::class,
+        Assignment2\Providers\AuthServiceProvider::class,
+        // Assignment2\Providers\BroadcastServiceProvider::class,
+        Assignment2\Providers\EventServiceProvider::class,
+        Assignment2\Providers\RouteServiceProvider::class,
 
     ],
 
