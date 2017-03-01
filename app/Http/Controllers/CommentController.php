@@ -13,10 +13,9 @@ class CommentController extends Controller
     $this->middleware('auth');
   }
 
-  //TODO: validation
   public function store(Post $post)
   {
-    $this->validate(request(), ['body' => 'required|min:5']);
+    $this->validate(request(), ['body' => 'required|min:5|regex:/^[a-zA-Z0-9-\x20]+$/']); //alphabetic, alphanumeric, dashes, & spaces
     $post->addComment(request('body'));
 
     return back(); //return to the previous page

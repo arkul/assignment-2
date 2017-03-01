@@ -8,12 +8,14 @@ class Post extends Model
 {
     protected $fillable = ['title', 'body', 'description', 'user_id'];
 
-    //TODO: validation
     public function scopeFilter($query, $filters)
     {
       if($month = $filters['month'])
       { //whereMonth expects an integer... we can use Carbon or php... let's use php
-	$query->whereMonth('created_at', date_parse($month)['month']);
+	//also let's check if we're filtering for an actual month...
+	$foo = date_parse($month);
+	if(array_key_exists('month', $foo) && isset($foo['month']))
+	  $query->whereMonth('created_at', $foo['month']);
       }
       if($year = $filters['year'])
       { $query->whereYear('created_at', $year);

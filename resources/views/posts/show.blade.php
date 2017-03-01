@@ -28,14 +28,14 @@ END NAV ITEMS
 <div class="container">
 <div class="blog-header">
 <h1 class="blog-title">{{ $post->title }}</h1>
-<p class="lead blog-description">{{ $post->description }}</p>
+<p class="lead blog-description">{!! $post->description !!}</p>
 </div>
 <div class="row">
 <div class="col-sm-8 blog-main">
 <div class="blog-post">
-{{ $post->body }}
+{!! $post->body !!}
 </div>
-<p class="blog-post-meta">{{ $post->created_at->toFormattedDateString() }} by <a href="#">{{-- $post->user->name --}}</a></p>
+<p class="blog-post-meta">{{ $post->created_at->toFormattedDateString() }} by <a href="#">{{ $post->user->name }}</a></p>
 </div> <!-- /.blog-main -->
 @include('layouts.sidebar')
 </div><!-- /.row -->
@@ -49,7 +49,7 @@ END NAV ITEMS
   <ul class="list-group">
   @foreach ($post->comments as $comment)
     <li class="list-group-item">
-      <strong>{{ $comment->created_at->diffForHumans() }}:</strong>&nbsp;
+      <strong>{{ $comment->created_at->diffForHumans() }}, <a href="#">{{ $comment->user->name }}</a> wrote:</strong>&nbsp;
       {{ $comment->body }}
     </li>
   @endforeach

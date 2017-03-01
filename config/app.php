@@ -140,6 +140,8 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+	//NEW: HTML purifier
+	Mews\Purifier\PurifierServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -192,6 +194,8 @@ return [
 
     'aliases' => [
 
+	//NEW: HTML purifier
+	'Purifier' => Mews\Purifier\Facades\Purifier::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
