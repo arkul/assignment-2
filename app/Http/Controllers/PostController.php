@@ -37,9 +37,10 @@ class PostController extends Controller
     //when validation fails, post back to the same page with a populated
     //$errors variable
     ////////////////////////
-    $this->validate(request(),[ 'title'	=> 'required|min:5',
-				'body'	=> 'required']);
-    auth()->user()->publish(new Post(request(['title','body'])));
+    $this->validate(request(),[ 'title'		=> 'required|min:5',
+				'description'	=> 'required|min:5',
+				'body'		=> 'required']);
+    auth()->user()->publish(new Post(request(['title','description','body'])));
     return redirect('/');
   }
 }
